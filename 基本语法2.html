@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <base target="_blank">
 </head>
 <body>
     <!--
@@ -19,11 +20,89 @@
         h1标题最重要，一个html文件中只能有一个h1，其他的都能出现多次
 
         <p></p> 主要是写正文的内容
-        //p12
+
      -->
      <h1>标题</h1>
      <h2></h2>
-     <p></p> 
+     <p>
+         <!--文本修饰标签-->
+         <strong>文本加粗</strong>
+        <em>文本斜体</em>
+        <strong><em>文件加粗+斜体</em></strong>
+        <sub>下标文本</sub>
+        <sup>上标文本</sup>
+        <del>删除文本（划掉）</del>
+        <ins>插入文本（下划线）</ins>
+
+         <!--图片标签-->
+         <!--
+            img:单标签
+            src:引入图片的地址
+            alt:当图片出现问题时可以显示一段友好的提示文字
+            title:放在图片/文字上的提示信息
+            width/height:控制图片大小
+           -->
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201809%2F23%2F20180923155632_js8Qc.thumb.400_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1656858818&t=60f43dc17fb8d08fd8aa47d378fa3cc1" 
+        alt="图片错误啦" title="这是图片提示信息" width="300" height="200" >
+        <!-- 
+            引入文件地址的图片
+
+            相对路径
+            .在路径中表示当前路径 与this本身平级
+            ..在路径中表示上一级路径 与this本身所相对的上一级
+            写路径2个斜线都可以（尽量避免写\） 
+         -->
+         <img src="./77240387.jpg" alt="" >
+
+
+         <!-- 
+             跳转链接 
+             链接标签
+             href:链接的地址
+             target：开启新的页面，就是在本页面后新建一个页面打开当前内容
+             base标签：改变链接的默认行为，让链接打开时都是新建一个页面，这样就不要一个一个改了，见head
+          -->
+          <a href="http://www.baidu.com">访问百度</a>
+
+          <a href="http://www.baidu.com">
+              <img src="./77240387.jpg" alt="">
+          </a>
+
+        <!--
+            跳转锚点：在当前页面跳转
+            br：换行
+          -->
+          <a href="#我玩"><br>我玩的temp</br></a>
+          <a href="#我也玩"><br>我玩的name</br></a>
+          <a href=""><br>temp01</br></a>
+          <a href=""><br>temp01</br></a>
+          <a href=""><br>temp01</br></a>
+          <a href=""><br>temp01</br></a>
+          <a href=""><br>temp01</br></a>
+          <a href=""><br>temp01</br></a>
+          <a href=""><br>temp01</br></a>
+          <a href=""><br>temp01</br></a>
+          <a href=""><br>temp01</br></a>
+          <b id="我玩"><br>我玩</b>
+          <a name="我也玩"></a>
+          <b><br>我玩</b>
+          <b><br>我玩</b>
+          <b><br>我玩</b>
+          <b><br>我玩</b>
+          <b><br>我玩</b>
+          <b><br>我玩</b>
+          <b><br><br>我玩</b>
+
+          <!--
+              
+          特殊符号
+          空格符、版权号、大于号、小于号、人民币....
+        
+        -->
+        <p>&lt;测试符号&gt;</p>
+     </p>
+
+  
 
 </body>
-</html>
+</html> 

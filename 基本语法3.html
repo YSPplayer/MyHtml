@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本语法3</title>
+</head>
+<body>
+    <!--
+        无序列表
+        ul:列表的最外层容器
+        li:列表项 
+        <ul>和<li>之间不能有其他标签 
+        type表示列表前面的样式
+    -->
+    <ul type="circle">
+         <li>第一项</li>
+         <li>第二项</li>
+    </ul>
+
+    <!--
+         有序列表：就是有数字顺序
+         一般用的比较少
+     -->
+     <ol>
+         <li>第一项</li>
+         <li>第二项</li>
+     </ol>
+
+     <!-- 
+         定义列表：描述列表项的
+        dl：容器
+        dt：定义专业术语，标题
+        dd：对标题进行描述的
+     -->
+     <dl>
+        <dt>Html</dt>
+        <dd>超文本标记语言</dd>
+        <dt>CSS</dt>
+        <dd>层叠样式表</dd>
+     </dl>
+
+     <!--
+         嵌套列表：列表之间可以相互嵌套，实现复杂需求
+     -->
+     <ul>
+         <li>
+             山东省
+             <ul>
+                <li>沈阳</li>
+                <li>大连</li>
+            </ul>
+         </li>
+         <li>
+             安徽省
+             <ul>
+                 <li>合肥</li>
+                 <li>滁州</li>
+                 <li>芜湖</li>
+             </ul>
+         </li>
+     </ul>
+     <!--
+         表格标签
+         table：表格的体
+         tr:列表的行
+         th:表头
+         td:表头的下面
+         caption:表格的标题
+         thead:语义化标签标题
+         tBody:语义化标签正文
+         tFood:语义化标签尾部
+        -->
+        <table>
+            <caption>天气预报</caption>
+            <thead>
+                <tr>
+                     <th>日期</th>
+                     <th>天气情况</th>
+                     <th>出行情况</th>
+                 </tr>
+           </thead>
+           <tbody>
+                <tr> 
+                    <td>2019年1月1日</td>
+                    <td><img src="./77240387.jpg" alt=""></td>
+                    <td>天气晴朗，适合出行</td>
+               </tr>
+                <tr>
+                    <td>2019年1月2日</td>
+                    <td><img src="./77240387.jpg" alt=""></td>
+                    <td>小雨，出门请带伞</td>
+               </tr>
+           </tbody>    
+        </table>
+    <!--
+        表格属性
+
+        border：表格边框
+        cellpadding:单元格内的空间
+         cellpadding:单元格之间的空间
+         colspan:合并行
+         rowspan:合并列
+         align：左右对齐
+         valign：上下对齐
+    -->
+    <table border="1" cellpadding="30" cellspacing="30">
+        <caption>天气预报</caption>
+        <thead>
+            <tr  align="right"  valign="top">
+                 <th colspan="2">日期</th>
+                 <th>天气情况</th>
+                 <th>出行情况</th>
+             </tr>
+       </thead>
+       <tbody>
+            <tr> 
+                <td rowspan="2">2019年1月1日</td>
+                <td>白天</td>
+                <td><img src="./77240387.jpg" alt=""></td>
+                <td>天气晴朗，适合出行</td>
+           </tr>
+           <tr> 
+            <td>白天</td>
+            <td><img src="./77240387.jpg" alt=""></td>
+            <td>天气晴朗，适合出行</td>
+          </tr>
+            <tr>
+                <td rowspan="2">2019年1月2日</td>
+                <td>黑天</td>
+                <td><img src="./77240387.jpg" alt=""></td>
+                <td>小雨，出门请带伞</td>
+           </tr>
+           <tr>
+            <td>黑天</td>
+            <td><img src="./77240387.jpg" alt=""></td>
+            <td>小雨，出门请带伞</td>
+       </tr>
+       </tbody>    
+    </table>
+    <!-- 
+     input:表单标签
+     type:决定是什么控件
+     单选框得通过name属性决定是一组的数值
+     placeholder：默认的提示字符
+     checked:让其默认被选中
+     disabled:禁止使用
+     -->
+     <form action="http://www.baidu.com">
+         <h2>输入框：</h2>
+         <input type="text" placeholder="请输入用户名">
+         <h2>密码框：</h2>
+         <input type="password" placeholder="请输入密码">
+         <h2>复选框</h2>
+         <input type="checkbox" checked>苹果
+         <input type="checkbox" disabled>香蕉
+         <input type="checkbox">梨子
+         <h2>单选框</h2>
+         <input type="radio" name="1">汽车
+         <input type="radio" name="1">卡车
+         <input type="radio" name="1">公交车
+         <h2>上传文件</h2>
+         <input type="file">
+         <h2>提交和重置</h2>
+         <input type="submit">
+         <input type="reset">
+         <!-- cols行 rows列-->
+         <h2>多行文本框</h2>
+         <textarea cols="30" rows="10"></textarea>
+          <!-- 
+              selected 当前被选中的一项
+              size:让显示的项有几个
+              multiple多选
+        -->
+         <h2>下拉菜单</h2>
+         <select>
+            <option selected disabled>请选择</option>
+             <option>北京</option>
+             <option>上海</option>
+             <option>杭州</option>
+             <option>南昌</option>
+             <option>山东</option>
+         </select>
+
+         <h2>下拉菜单</h2>
+         <select size="2">
+            <option selected disabled>请选择</option>
+             <option>北京</option>
+             <option>上海</option>
+             <option>杭州</option>
+             <option>南昌</option>
+             <option>山东</option>
+         </select>
+
+         <h2>多选</h2>
+         <select multiple>
+            <option selected disabled>请选择</option>
+             <option>北京</option>
+             <option>上海</option>
+             <option>杭州</option>
+             <option>南昌</option>
+             <option>山东</option>
+         </select>
+        <!--
+            label：让选中范围增大
+            id 和 for映射
+        -->
+        <h2>单选框</h2>
+        <input type="radio" name="1" id="qi"><label for="qi">汽车</label> 
+        <input type="radio" name="1" id="ka"><label for="ka">卡车</label> 
+        <input type="radio" name="1" id="go"><label for="go">公交车</label> 
+     </form>
+   
+</body>
+</html>
